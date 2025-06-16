@@ -1,10 +1,10 @@
-# 🧪 AWS VPC Transit Gateway – Lab Procedure
+#  AWS VPC Transit Gateway
 
-## 🔧 Procedure
+##  Procedure
 
 ---
 
-### 🔹 Step 1: Create VPC-1 (Public VPC)
+###  Step 1: Create VPC-1 (Public VPC)
 
 - Create a VPC with CIDR block: `10.0.0.0/25`
 - Create a **public subnet**: `10.0.0.0/26`
@@ -17,7 +17,7 @@
 
 ---
 
-### 🔹 Step 2: Create VPC-2 (Private VPC)
+###  Step 2: Create VPC-2 (Private VPC)
 
 - Create a VPC with CIDR block: `11.0.0.0/25`
 - Create a **private subnet**: `11.0.0.0/26`
@@ -29,7 +29,7 @@
 
 ---
 
-### 🔹 Step 3: Create VPC-3 (Private VPC)
+###  Step 3: Create VPC-3 (Private VPC)
 
 - Create a VPC with CIDR block: `12.0.0.0/25`
 - Create a **private subnet**: `12.0.0.0/26`
@@ -41,7 +41,7 @@
 
 ---
 
-### 🔹 Step 4: Configure Security Groups
+###  Step 4: Configure Security Groups
 
 - **Public Security Group (VPC-1)**:
   - Allow inbound:
@@ -52,7 +52,7 @@
 - **Private Security Groups (VPC-2 & VPC-3)**:
   - Allow SSH access **only from VPC-1**
   
-## 🏗️ VPC Configuration
+##  VPC Configuration
 
 | VPC | CIDR Block    | Subnet Type | IGW | EC2 | TGW |
 |-----|---------------|-------------|-----|-----|-----|
@@ -65,7 +65,7 @@
 
 ---
 
-### 🔹 Step 5: Deploy EC2 Instances
+###  Step 5: Deploy EC2 Instances
 
 - Launch an **Amazon Linux 2 EC2 instance** in VPC-1 (with a public IP)
 - Use the following **User Data** script:
@@ -81,14 +81,14 @@
 ![](images/s5.png)
 
 
-### 🔹 Step 6: Verify Connectivity
+###  Step 6: Verify Connectivity
 
 - Connect to the **EC2 instance in VPC-1** using SSH.
 
 ![](images/s6.1.png)
 
 
-- •	From there, connect to the private EC2 instances in **VPC-2 and VPC-3**
+- 	From there, connect to the private EC2 instances in **VPC-2 and VPC-3**
   
 ![](s6.2.png)
 
