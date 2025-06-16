@@ -24,6 +24,9 @@
 - Configure a **private route table** for VPC-2
 - Enable **DNS hostname resolution** in VPC-2 settings
 
+![](s2.png)
+
+
 ---
 
 ### 🔹 Step 3: Create VPC-3 (Private VPC)
@@ -32,6 +35,9 @@
 - Create a **private subnet**: `12.0.0.0/26`
 - Configure a **private route table** for VPC-3
 - Enable **DNS hostname resolution** in VPC-3 settings
+
+![](s3.png)
+
 
 ---
 
@@ -54,6 +60,9 @@
 | VPC-2 | 11.0.0.0/25 | Private     | ❌  | ✅  | ✅  |
 | VPC-3 | 12.0.0.0/25 | Private     | ❌  | ✅  | ✅  |
 
+![](s4.png)
+
+
 ---
 
 ### 🔹 Step 5: Deploy EC2 Instances
@@ -68,8 +77,18 @@
   systemctl start httpd
   systemctl enable httpd
   echo "<h1>Welcome</h1>" > /var/www/html/index.html
+
+![](s5.png)
+
+
 ### 🔹 Step 6: Verify Connectivity
 
 - Connect to the **EC2 instance in VPC-1** using SSH.
+
+![](s6.1.png)
+
+
 - •	From there, connect to the private EC2 instances in **VPC-2 and VPC-3**
+  
+![](s6.2.png)
 
