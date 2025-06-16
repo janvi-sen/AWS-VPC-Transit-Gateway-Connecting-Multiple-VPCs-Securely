@@ -13,7 +13,7 @@
   - Add route: `0.0.0.0/0` → IGW
 - Enable **DNS hostname resolution** in VPC settings
 
-![](s1.png)
+![](images/s1.png)
 
 ---
 
@@ -24,7 +24,7 @@
 - Configure a **private route table** for VPC-2
 - Enable **DNS hostname resolution** in VPC-2 settings
 
-![](s2.png)
+![](images/s2.png)
 
 
 ---
@@ -36,7 +36,7 @@
 - Configure a **private route table** for VPC-3
 - Enable **DNS hostname resolution** in VPC-3 settings
 
-![](s3.png)
+![](images/s3.png)
 
 
 ---
@@ -60,7 +60,7 @@
 | VPC-2 | 11.0.0.0/25 | Private     | ❌  | ✅  | ✅  |
 | VPC-3 | 12.0.0.0/25 | Private     | ❌  | ✅  | ✅  |
 
-![](s4.png)
+![](images/s4.png)
 
 
 ---
@@ -78,14 +78,14 @@
   systemctl enable httpd
   echo "<h1>Welcome</h1>" > /var/www/html/index.html
 
-![](s5.png)
+![](images/s5.png)
 
 
 ### 🔹 Step 6: Verify Connectivity
 
 - Connect to the **EC2 instance in VPC-1** using SSH.
 
-![](s6.1.png)
+![](images/s6.1.png)
 
 
 - •	From there, connect to the private EC2 instances in **VPC-2 and VPC-3**
