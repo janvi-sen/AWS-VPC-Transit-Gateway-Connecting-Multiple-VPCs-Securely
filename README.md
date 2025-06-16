@@ -13,6 +13,8 @@
   - Add route: `0.0.0.0/0` → IGW
 - Enable **DNS hostname resolution** in VPC settings
 
+![](s1.png)
+
 ---
 
 ### 🔹 Step 2: Create VPC-2 (Private VPC)
@@ -43,6 +45,14 @@
 
 - **Private Security Groups (VPC-2 & VPC-3)**:
   - Allow SSH access **only from VPC-1**
+  
+## 🏗️ VPC Configuration
+
+| VPC | CIDR Block    | Subnet Type | IGW | EC2 | TGW |
+|-----|---------------|-------------|-----|-----|-----|
+| VPC-1 | 10.0.0.0/25 | Public      | ✅  | ✅  | ✅  |
+| VPC-2 | 11.0.0.0/25 | Private     | ❌  | ✅  | ✅  |
+| VPC-3 | 12.0.0.0/25 | Private     | ❌  | ✅  | ✅  |
 
 ---
 
@@ -58,3 +68,8 @@
   systemctl start httpd
   systemctl enable httpd
   echo "<h1>Welcome</h1>" > /var/www/html/index.html
+### 🔹 Step 6: Verify Connectivity
+
+- Connect to the **EC2 instance in VPC-1** using SSH.
+- •	From there, connect to the private EC2 instances in **VPC-2 and VPC-3**
+
